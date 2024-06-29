@@ -3,6 +3,16 @@ entries:
   c1:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-06-29T22:31:52.842726057Z"
+    description: A Helm chart for Kubernetes
+    digest: bf8ff824de5674f32ff1b43f4b4dc310c29db4e612b463de3a94cdb86c30b226
+    name: c1
+    type: application
+    urls:
+    - https://github.com/fsedano/charts/releases/download/c1-0.1.1/c1-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-06-29T22:30:01.258609596Z"
     description: A Helm chart for Kubernetes
     digest: 049de452091d747dffa2750bd3d7acffb69dd89e0aa7ff621341da2bae785823
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/fsedano/charts/releases/download/c1-0.1.0/c1-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-29T22:30:01.258617631Z"
+generated: "2024-06-29T22:31:52.842737068Z"
