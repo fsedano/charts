@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flagsmith-pg
+spec:
+  selector:
+    app: flagsmith-pg
+  ports:
+  - name: psql
+    port: 5432
+    protocol: TCP
+    targetPort: 5432
+  type: ClusterIP

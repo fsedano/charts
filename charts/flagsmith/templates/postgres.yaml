@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flagsmith-pg
+  name: flagsmith-pg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flagsmith-pg
+  template:
+    metadata:
+      labels:
+        app: flagsmith-pg
+    spec:
+      containers:
+      - image: postgres:15.5-alpine
+        name: flagsmith-pg
+        env:
+          - name: POSTGRES_PASSWORD
+            value: password
+          - name: POSTGRES_DB
+            value: flagsmith
+

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flagsmith
+  name: flagsmith
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flagsmith
+  template:
+    metadata:
+      labels:
+        app: flagsmith
+    spec:
+      containers:
+      - image: flagsmith.docker.scarf.sh/flagsmith/flagsmith:latest
+        name: flagsmith
+        env:
+          - name: DATABASE_URL
+            value: postgresql://postgres:password@flagsmith-pg:5432/flagsmith
+          - name: USE_POSTGRES_FOR_ANALYTICS
+            value: 'true'
+
+          - name: ENVIRONMENT
+            value: dev
+
+          - name: DJANGO_ALLOWED_HOSTS
+            value: '*' # Change this in production
+          - name: ALLOW_ADMIN_INITIATION_VIA_CLI
+            value: 'true' # Change this in production
+          - name: FLAGSMITH_DOMAIN
+            value: localhost:8000 
+          - name: DJANGO_SECRET_KEY
+            value: secret # Change this in production
+          - name: ENABLE_ADMIN_ACCESS_USER_PASS
+            value: 'true'
