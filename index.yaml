@@ -31,4 +31,15 @@ entries:
     urls:
     - https://github.com/fsedano/charts/releases/download/c1-0.1.0/c1-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-29T22:39:35.477674126Z"
+  flagsmith:
+  - apiVersion: v2
+    appVersion: 2.126.0
+    created: "2024-06-30T14:42:34.742727409Z"
+    description: FSmith
+    digest: ca79de7816726be7c9d622258f78d1b6ca0b61f39555625ed90dfea9312a3d81
+    name: flagsmith
+    type: application
+    urls:
+    - https://github.com/fsedano/charts/releases/download/flagsmith-0.1.0/flagsmith-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-30T14:42:34.742742868Z"
